@@ -1,14 +1,12 @@
 {
   "name": "quill-image-resize-module-react",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A module for Quill rich text editor to allow images to be resized (with react fixes).",
-  "main": "image-resize.min.js",
+  "main": "dist/imageResize.cjs.js",
+  "module": "dist/imageResize.es.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "build": "webpack -p --progress --colors",
-    "dev": "webpack --progress --colors --watch",
-    "lint": "eslint --ext js,es6 src",
-    "fixlint": "eslint --fix --ext js,es6 src"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -26,30 +24,44 @@
     {
       "name": "Wikia",
       "url": "https://github.com/Wikia"
+    },
+    {
+      "name": "Capaj",
+      "url": "https://github.com/capaj"
     }
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kensnyder/quill-image-resize-module/issues"
+    "url": "https://github.com/capaj/quill-image-resize-module/issues"
   },
-  "homepage": "https://github.com/kensnyder/quill-image-resize-module#readme",
+  "homepage": "https://github.com/capaj/quill-image-resize-module#readme",
   "devDependencies": {
-    "babel-cli": "^6.24.0",
-    "babel-eslint": "^7.2.1",
-    "babel-loader": "^6.4.1",
-    "babel-plugin-transform-class-properties": "^6.23.0",
-    "babel-preset-env": "^1.2.2",
-    "babel-preset-es2015": "^6.24.0",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
-    "webpack": "^2.3.3"
+    "husky": "^3.0.5",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "rollup": "^1.20.3",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-svg": "^2.0.0",
+    "lodash": "^4.17.15",
+    "quill": "^1.3.6"
   },
-  "dependencies": {
-    "lodash": "^4.17.4",
-    "quill": "^1.2.2",
-    "raw-loader": "^0.5.1"
+  "peerDependencies": {
+    "lodash": "^4.17.15",
+    "quill": "^1.3.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }

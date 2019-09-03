@@ -1,5 +1,10 @@
 # Changelog
 
+## v3.0.0 - September 4, 2019
+
+- fix a bug with when defocusing an image by clicking outside quill editor
+- switch to rollup for bundling
+
 ## v3.0.0 - April 9, 2017
 
 - Position drag handles relative to editor, not document
