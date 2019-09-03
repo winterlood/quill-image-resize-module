@@ -1,9 +1,9 @@
 {
   "name": "@capaj/quill-image-resize-module-react",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "A module for Quill rich text editor to allow images to be resized (with react fixes).",
-  "main": "dist/imageResize.cjs.js",
-  "module": "dist/imageResize.es.js",
+  "main": "dist/ImageResize.cjs.js",
+  "module": "dist/ImageResize.es.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
     "build": "rollup -c"

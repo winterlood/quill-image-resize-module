@@ -1,6 +1,6 @@
 # Changelog
 
-## v3.0.0 - September 4, 2019
+## v3.0.1 - September 4, 2019
 
 - fix a bug with when defocusing an image by clicking outside quill editor
 - switch to rollup for bundling

@@ -2,6 +2,7 @@ import svg from 'rollup-plugin-svg'
 import babel from 'rollup-plugin-babel'
 import sourcemaps from 'rollup-plugin-sourcemaps'
 import resolve from 'rollup-plugin-node-resolve'
+import pkgJson from './package.json'
 
 export default {
   plugins: [
@@ -15,12 +16,12 @@ export default {
   input: './src/ImageResize.js',
   output: [
     {
-      file: './dist/ImageResize.cjs.js',
+      file: pkgJson.main,
       sourcemap: true,
       format: 'cjs'
     },
     {
-      file: './dist/ImageResize.es.js',
+      file: pkgJson.module,
       sourcemap: true,
       format: 'es'
     }
