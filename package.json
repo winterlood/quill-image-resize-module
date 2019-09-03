@@ -1,5 +1,5 @@
 {
-  "name": "quill-image-resize-module-react",
+  "name": "@capaj/quill-image-resize-module-react",
   "version": "3.0.1",
   "description": "A module for Quill rich text editor to allow images to be resized (with react fixes).",
   "main": "dist/imageResize.cjs.js",
