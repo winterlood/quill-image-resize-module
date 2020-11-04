@@ -1,7 +1,7 @@
 {
-  "name": "@capaj/quill-image-resize-module-react",
+  "name": "@looop/quill-image-resize-module-react",
   "version": "3.0.2",
-  "description": "A module for Quill rich text editor to allow images to be resized (with react fixes).",
+  "description": "A module for Quill rich text editor to allow images to be resized.",
   "main": "dist/ImageResize.cjs.js",
   "module": "dist/ImageResize.es.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/concrete-cc/quill-image-resize-module-react.git"
+    "url": "git+https://github.com/LeapLabs/quill-image-resize-module.git"
   },
   "keywords": [
     "quill",
@@ -19,7 +19,7 @@
     "resize",
     "sizer"
   ],
-  "author": "@kensnyder",
+  "author": "@LeapLabs",
   "contributors": [
     {
       "name": "Wikia",
@@ -32,9 +32,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/capaj/quill-image-resize-module/issues"
+    "url": "https://github.com/LeapLabs/quill-image-resize-module/issues"
   },
-  "homepage": "https://github.com/capaj/quill-image-resize-module#readme",
+  "homepage": "https://github.com/LeapLabs/quill-image-resize-module#readme",
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
