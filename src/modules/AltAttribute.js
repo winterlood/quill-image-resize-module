@@ -12,19 +12,24 @@ export class AltAttribute extends BaseModule {
     this.overlay.appendChild(this.display)
 
     // ALT input
-    const input = document.createElement('input')
+    this.altInput = document.createElement('input')
     if (this.img.alt) {
-      input.value = this.img.alt
+      // Set default value into the input
+      this.altInput.value = this.img.alt
     }
-    input.addEventListener('input', (e) => {
-      this.img.alt = e.target.value
-    })
+    this.altInput.addEventListener('input', this.onAltInputChange)
 
     this.display.insertAdjacentHTML('beforeend', 'Alt: ')
-    this.display.appendChild(input)
+    this.display.appendChild(this.altInput)
   }
 
-  onDestroy = () => {}
+  onAltInputChange = (e) => {
+    this.img.alt = e.target.value
+  }
+
+  onDestroy = () => {
+    this.altInput.removeEventListener('input', this.onAltInputChange)
+  }
 
   onUpdate = () => {
     if (!this.display || !this.img) {
