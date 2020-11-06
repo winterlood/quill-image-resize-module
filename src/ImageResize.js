@@ -3,8 +3,9 @@ import DefaultOptions from './DefaultOptions'
 import { DisplaySize } from './modules/DisplaySize'
 import { Toolbar } from './modules/Toolbar'
 import { Resize } from './modules/Resize'
+import { AltAttribute } from './modules/AltAttribute'
 
-const knownModules = { DisplaySize, Toolbar, Resize }
+const knownModules = { DisplaySize, Toolbar, Resize, AltAttribute }
 
 /**
  * Custom module for quilljs to allow user to resize <img> elements
@@ -191,12 +192,14 @@ export default class ImageResize {
     if (this.img) {
       if (
         document.activeElement.tagName === 'BODY' &&
-        (evt.keyCode == 46 || evt.keyCode == 8)
+        (evt.code === 46 ||
+          evt.code === 8 ||
+          evt.keyCode === 46 ||
+          evt.keyCode === 8)
       ) {
         window.Quill.find(this.img).deleteAt(0)
+        this.hide()
       }
-
-      this.hide()
     }
   }
 }

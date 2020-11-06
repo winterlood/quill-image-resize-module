@@ -1,5 +1,5 @@
 export default {
-  modules: ['DisplaySize', 'Toolbar', 'Resize'],
+  modules: ['DisplaySize', 'Toolbar', 'Resize', 'AltAttribute'],
   overlayStyles: {
     position: 'absolute',
     boxSizing: 'border-box',
