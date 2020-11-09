@@ -1,6 +1,6 @@
 {
   "name": "@looop/quill-image-resize-module-react",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "A module for Quill rich text editor to allow images to be resized.",
   "main": "dist/ImageResize.cjs.js",
   "module": "dist/ImageResize.es.js",
