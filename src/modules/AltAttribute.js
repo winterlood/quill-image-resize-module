@@ -25,6 +25,7 @@ export class AltAttribute extends BaseModule {
 
   onAltInputChange = (e) => {
     this.img.alt = e.target.value
+    this.img.title = e.target.value
   }
 
   onDestroy = () => {
@@ -40,7 +41,7 @@ export class AltAttribute extends BaseModule {
       right: 'auto',
       bottom: '-40px',
       left: '8px',
-      'min-width': '172px'
+      'min-width': '172px',
     })
   }
 
@@ -48,6 +49,6 @@ export class AltAttribute extends BaseModule {
     this.img.width,
     Math.round(
       (this.img.width / this.img.naturalWidth) * this.img.naturalHeight
-    )
+    ),
   ]
 }
