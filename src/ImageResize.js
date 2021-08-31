@@ -197,11 +197,15 @@ export default class ImageResize {
           evt.keyCode === 46 ||
           evt.keyCode === 8)
       ) {
-        const imageNode = window.Quill.find(this.img)
-        if (imageNode) {
-          imageNode.deleteAt(0)
+        try {
+          const imageNode = window.Quill.find(this.img)
+          if (imageNode) {
+            imageNode.deleteAt(0)
+          }
+          this.hide()
+        } catch (e) {
+          console.log('NOT SUPPORTED ACTION NOW')
         }
-        this.hide()
       }
     }
   }
